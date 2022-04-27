@@ -6,7 +6,9 @@
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "logs": "firebase functions:log",
+    "dbseed": "npm run dbseed:publishers",
+    "dbseed:publishers": "ts-node src/commands/dbseed.ts publishers src/seeds/publishers.tsv"
   },
   "engines": {
     "node": "16"
