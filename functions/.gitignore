@@ -9,3 +9,5 @@ typings/
 node_modules/
 
 react-firebase-tutorial-adminsdk.json
+
+.runtimeconfig.json

@@ -1,9 +1,18 @@
-// import * as functions from "firebase-functions";
+import admin from 'firebase-admin'
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+admin.initializeApp()
+
+const functionMap = {
+  fetchCalendar: './use-cases/fetch-calendar',
+  publishers: './use-cases/publishers',
+}
+
+function loadFunctions(fnMap: typeof functionMap) {
+  for (const [functionName, path] of Object.entries(fnMap)) {
+    if (!process.env.FUNCTION_TARGET || process.env.FUNCTION_TARGET === functionName) {
+      module.exports[functionName] = require(path)
+    }
+  }
+}
+
+loadFunctions(functionMap)

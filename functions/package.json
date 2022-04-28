@@ -17,9 +17,14 @@
   "dependencies": {
     "commander": "^9.2.0",
     "csv-parse": "^5.0.4",
+    "date-fns": "^2.28.0",
+    "date-fns-timezone": "^0.1.4",
     "firebase": "^9.6.11",
     "firebase-admin": "^10.0.2",
-    "firebase-functions": "^3.18.0"
+    "firebase-functions": "^3.18.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.2.3",
+    "puppeteer": "^13.6.0"
   },
   "devDependencies": {
     "@types/commander": "^2.12.2",
