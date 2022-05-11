@@ -1,5 +1,4 @@
 import admin from 'firebase-admin'
-
 import { collectionName } from '../services/mangarel/constants'
 import { FeedMemo } from '../services/mangarel/models/feed-memo'
 
