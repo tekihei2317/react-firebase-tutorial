@@ -5,6 +5,12 @@ type CalendarProps = {
   loading?: boolean
 }
 
-export const Calendar: React.FC<CalendarProps> = () => {
-  return <div>test</div>
+export const Calendar: React.FC<CalendarProps> = ({ books }) => {
+  return (
+    <ul>
+      {books.map((book) => (
+        <li key={book.title}>{book.title}</li>
+      ))}
+    </ul>
+  )
 }

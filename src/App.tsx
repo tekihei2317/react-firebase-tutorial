@@ -1,4 +1,3 @@
-import React, { useContext } from 'react'
 import { Route, Routes } from 'react-router'
 import './App.css'
 import { paths } from 'paths'

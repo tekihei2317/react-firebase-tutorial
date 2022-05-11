@@ -1,9 +1,8 @@
-import { Book } from 'services/mangarel/models/book'
+import { useBooks } from 'hooks/use-books'
 import { Calendar } from './Calendar'
 
 export const CalendarContaienr: React.FC = () => {
-  const books = [] as Book[]
-  const loading = false
+  const { books, loading } = useBooks()
 
   return <Calendar books={books} loading={loading} />
 }
