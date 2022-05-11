@@ -1,8 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { FirebaseContext, ThemeContext } from 'contexts'
 
 function App() {
+  const theme = useContext(ThemeContext)
+  console.log(theme)
+  const db = useContext(FirebaseContext)
+  console.log(db)
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +25,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
